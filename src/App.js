@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import CardItems from './Components/CardItems';
+import ShoopingCards from './Components/ShoopingCards';
+import {ShoppingList} from './context/ShoppingItemsContext';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1 className='font-bold text-4xl'>Shopping List</h1>
+  
+  <ShoppingList>
+ <div className='flex gap-3 w-full '>
+ <ShoopingCards/>
+    
+    <CardItems/>
+ </div>
+  </ShoppingList>
+  
     </div>
   );
 }
